@@ -1,0 +1,54 @@
+pochatok= input("Введіть години хвилини секунди початку")
+end= input("Введіть години хвилини секунди кінця")
+
+h1 = ""
+m1 = ""
+s1 = ""
+bochka1 = ""
+part1 = 0
+h2 = ""
+m2 = ""
+s2 = ""
+bochka2 = ""
+part2 = 0
+
+for i in pochatok:
+    if i == " ":
+        if part1 == 0:
+            h1 = bochka1
+        elif part1 == 1:
+            m1 = bochka1
+        elif part1 == 2:
+            s1 = bochka1
+        bochka1 = ""
+        part1 = part1+ 1
+    else:
+        bochka1 =bochka1 + i
+        s1 = bochka1
+
+for u in end:
+    if u == " ":
+        if part2 == 0:
+            h2 = bochka2
+        elif part2 == 1:
+            m2 = bochka2
+        elif part2 == 2:
+            s2 = bochka2
+        bochka2 = ""
+        part2 = part2+ 1
+    else:
+        bochka2 =bochka2 + u
+        s2 = bochka2
+h1 = int(h1)
+m1 = int(m1)
+s1 = int(s1)
+h2 = int(h2)
+m2 = int(m2)
+s2 = int(s2)
+res_h=h2-h1
+res_m=m2-m1
+res_s=s2-s1
+
+resultat = str(res_h) +" "+ str(res_m) +" "+ str(res_s)
+
+print(resultat)
